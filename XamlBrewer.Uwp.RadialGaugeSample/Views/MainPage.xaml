@@ -7,7 +7,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
 
-    <Grid Background="White">
+    <Grid Background="Black"
+          Padding="2 2 0 0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -24,25 +25,62 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <controls:Gauge Grid.Row="0"
-                        Grid.Column="4"
-                        Grid.ColumnSpan="2"
-                        Grid.RowSpan="2" />
-        <controls:Gauge Grid.Row="1"
-                        Grid.Column="1"
-                        Grid.ColumnSpan="1"
-                        Grid.RowSpan="1" />
-        <controls:Gauge Grid.Row="2"
-                        Grid.Column="2"
-                        Grid.ColumnSpan="3"
-                        Grid.RowSpan="3" />
-        <controls:Gauge Grid.Row="4"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="2"
-                        Grid.RowSpan="2" />
-        <controls:Gauge Grid.Row="5"
-                        Grid.Column="5"
-                        Grid.ColumnSpan="1"
-                        Grid.RowSpan="1" />
+        <Grid Grid.Row="0"
+              Grid.Column="0"
+              Grid.RowSpan="2"
+              Background="White"
+              Margin="0 0 2 4" />
+        <Grid Grid.Row="0"
+              Grid.Column="1"
+              Background="Blue"
+              Margin="2 0 4 2" />
+        <Grid Grid.Row="1"
+              Grid.Column="1"
+              Background="Yellow"
+              Margin="2 2 4 4">
+            <controls:Gauge />
+        </Grid>
+        <Grid Grid.Row="0"
+              Grid.Column="4"
+              Grid.RowSpan="2"
+              Grid.ColumnSpan="2"
+              Background="White"
+              Margin="2 0 0 4">
+            <controls:Gauge />
+        </Grid>
+        <Grid Grid.Row="4"
+              Grid.Column="0"
+              Grid.RowSpan="2"
+              Grid.ColumnSpan="2"
+              Background="Red"
+              Margin="0 2 4 0">
+            <controls:Gauge />
+        </Grid>
+        <Grid Grid.Row="2"
+              Grid.Column="2"
+              Grid.RowSpan="3"
+              Grid.ColumnSpan="3"
+              Background="White"
+              Margin="4 4 2 2">
+            <controls:Gauge />
+        </Grid>
+        <Grid Grid.Row="2"
+              Grid.Column="5"
+              Grid.RowSpan="3"
+              Background="Blue"
+              Margin="2 4 0 2" />
+        <Grid Grid.Row="5"
+              Grid.Column="2"
+              Grid.ColumnSpan="3"
+              Background="Yellow"
+              Margin="4 2 2 0" />
+        <Grid Grid.Row="5"
+              Grid.Column="5"
+              Grid.ColumnSpan="1"
+              Grid.RowSpan="1"
+              Margin="2 2 0 0"
+              Background="White">
+            <controls:Gauge />
+        </Grid>
     </Grid>
 </Page>
