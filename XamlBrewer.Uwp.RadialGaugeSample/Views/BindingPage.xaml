@@ -18,12 +18,51 @@
         </Grid.ColumnDefinitions>
         <controls:Gauge Value="{x:Bind ViewModel.Expense, Mode=OneWay}"
                         Unit="expense"
-                        Margin="4" />
-        <controls:Gauge Value="{x:Bind ViewModel.Balance, Mode=OneWay}"
-                        Unit="balance"
-                        Maximum="500"
-                        Margin="4"
-                        Grid.Column="1" />
+                        ScaleTickBrush="Transparent"
+                        TickBrush="Transparent"
+                        ScaleWidth="40"
+                        Margin="4">
+            <controls:Gauge.ScaleBrush>
+                <ImageBrush ImageSource="ms-appx:///Assets/money.jpg" />
+            </controls:Gauge.ScaleBrush>
+            <controls:Gauge.NeedleBrush>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="Transparent" />
+                    <GradientStop Color="Goldenrod"
+                                  Offset="0.5" />
+                    <GradientStop Color="Transparent"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </controls:Gauge.NeedleBrush>
+            <controls:Gauge.TrailBrush>
+                <SolidColorBrush Color="Green"
+                                 Opacity=".25" />
+            </controls:Gauge.TrailBrush>
+        </controls:Gauge>
+        <Grid  Grid.Column="1">
+            <Image Source="ms-appx:///Assets/piggybank.jpg" />
+            <controls:Gauge Value="{x:Bind ViewModel.Balance, Mode=OneWay}"
+                            Unit="balance"
+                            ScaleWidth="76"
+                            ScaleBrush="Transparent"
+                            NeedleBrush="Transparent"
+                            ScaleTickBrush="Transparent"
+                            Margin="4">
+                <controls:Gauge.TickBrush>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="Transparent" />
+                        <GradientStop Color="Pink"
+                                      Offset="0.5" />
+                        <GradientStop Color="Transparent"
+                                      Offset="1" />
+                    </LinearGradientBrush>
+                </controls:Gauge.TickBrush>
+                <controls:Gauge.TrailBrush>
+                    <SolidColorBrush Color="Pink"
+                                     Opacity=".75" />
+                </controls:Gauge.TrailBrush>
+            </controls:Gauge>
+        </Grid>
         <TextBlock Text="Slide: "
                    HorizontalAlignment="Right"
                    VerticalAlignment="Center"

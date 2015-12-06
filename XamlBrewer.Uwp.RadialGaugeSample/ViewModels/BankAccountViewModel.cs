@@ -5,7 +5,7 @@ namespace XamlBrewer.Uwp.RadialGaugeSample.ViewModels
     class BankAccountViewModel: ViewModelBase
     {
         private double expense;
-        private double balance = 500;
+        private double balance = 100;
 
         public double Expense
         {
@@ -13,7 +13,7 @@ namespace XamlBrewer.Uwp.RadialGaugeSample.ViewModels
             set
             {
                 SetProperty(ref expense, value);
-                Balance = 500 - value;
+                Balance = 100 - value;
             }
         }
 
