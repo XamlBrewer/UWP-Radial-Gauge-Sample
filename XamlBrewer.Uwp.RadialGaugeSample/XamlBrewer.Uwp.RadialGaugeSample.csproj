@@ -101,10 +101,14 @@
     <Compile Include="Mvvm\DelegateCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Theme.cs" />
+    <Compile Include="ViewModels\BankAccountViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\MenuItem.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\BindingPage.xaml.cs">
+      <DependentUpon>BindingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPage.xaml.cs" />
     <Compile Include="Views\Shell.xaml.cs" />
   </ItemGroup>
@@ -129,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\BindingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
